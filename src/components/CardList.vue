@@ -1,9 +1,15 @@
 <template>
-    <div>
-        <h2>
-            Card List
-        </h2>
-        <SingleCard/>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>
+                    Card List
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <SingleCard/>
+        </div>
     </div>
 </template>
 
