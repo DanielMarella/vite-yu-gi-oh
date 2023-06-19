@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2>
-                    Card List :
+                <h2 class="mb-5">
+                    In questa pagina ci sono {{ this.cardList.length }} carte!
                 </h2>
             </div>
         </div>
@@ -46,5 +46,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    
+    h2{
+        color: white;
+    }
 </style>

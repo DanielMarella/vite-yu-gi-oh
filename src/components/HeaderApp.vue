@@ -1,8 +1,8 @@
 <template>
     <header>
-        <div class="head">
-            <div class="logo">
-
+        <div class="head mb-5">
+            <div class="logo mx-3">
+                <img src="../assets/logo.png" alt="logo di Yu-Gi-Oh">
             </div>
             <h1>Yu-Gi-Oh Api</h1>
         </div>
@@ -21,19 +21,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    
+    header{
+        background-color: white;
+        color: lime;
+
+        img{
+            width: 100px;
+        }
+    }
     .head{
         width: 100%;
-        border: 5px solid red;
         padding: 10px 0;
         display: flex;
         align-items: center;
-
+        border-bottom: 5px solid greenyellow;
         .logo{
-            border: 2px solid black;
-            width: 80px;
-            padding: 40px;
-            margin: 0 10px;
         }
 
     }

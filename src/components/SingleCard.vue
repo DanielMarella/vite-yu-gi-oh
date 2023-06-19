@@ -1,8 +1,8 @@
 <template>
-    <div class="card mb-3 col-3">
+    <div class="card pt-2 mb-4 mx-3 col-2">
         <img :src="cardImg" class="card-img-top" alt="name + 'image'">
         <div class="card-body">
-            <h5 class="card-title">
+            <h5 class="card-title fw-bold">
                 {{cardName}}
             </h5>
             <p class="card-text">
@@ -28,5 +28,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    
+    .card{
+        background-color: rgb(64, 255, 0);
+
+    }
 </style>
