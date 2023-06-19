@@ -9,7 +9,7 @@
         </div>
         <div class="row">
             <SingleCard v-for="card in cardList"
-            :cardImg="card.card_images.image_url"
+            :cardImg="card.card_images[this.index].image_url"
             :cardName="card.name"
             :cardType="card.archetype"
             />
@@ -25,6 +25,7 @@ export default {
     data() {
         return {
             cardList : [],
+            index : 0,
         }
     },
 
@@ -37,7 +38,6 @@ export default {
     .then( (response) => {
         console.log(response.data.data);
         this.cardList = response.data.data;
-        console.log(response.data.data.card_images.image_url);
     })
     .catch(function (error) {
         console.log(error);
