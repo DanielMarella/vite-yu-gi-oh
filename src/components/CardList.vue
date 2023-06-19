@@ -3,12 +3,16 @@
         <div class="row">
             <div class="col-12">
                 <h2>
-                    Card List
+                    Card List :
                 </h2>
             </div>
         </div>
         <div class="row">
-            <SingleCard v-for="card in cardList"/>
+            <SingleCard v-for="card in cardList"
+            :cardImg="card.card_images.image_url"
+            :cardName="card.name"
+            :cardType="card.archetype"
+            />
         </div>
     </div>
 </template>
@@ -33,6 +37,7 @@ export default {
     .then( (response) => {
         console.log(response.data.data);
         this.cardList = response.data.data;
+        console.log(response.data.data.card_images.image_url);
     })
     .catch(function (error) {
         console.log(error);
