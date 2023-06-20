@@ -50,7 +50,7 @@ export default {
         setTimeout( () => {
             this.cardList = response.data.data;
             this.store.isLoading = false;
-        },6000)
+        },4000)
     })
     .catch(function (error) {
         console.log(error);

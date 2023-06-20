@@ -22,8 +22,8 @@ export default {
 
 <style lang="scss" scoped>
     header{
-        background-color: white;
-        color: lime;
+        background-color: rgb(63, 81, 87);
+        color: rgb(64, 255, 0);
 
         img{
             width: 100px;
@@ -34,7 +34,7 @@ export default {
         padding: 10px 0;
         display: flex;
         align-items: center;
-        border-bottom: 5px solid greenyellow;
+        border-bottom: 5px solid  rgb(64, 255, 0);
         .logo{
         }
 
