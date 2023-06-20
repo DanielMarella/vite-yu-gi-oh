@@ -1,6 +1,6 @@
 <template>
     <main>
-        <SelectCardType />
+        <SelectCardType @search="search" />
         <div class="container">
             <div class="row" v-if="store.isLoading">
                 <div class="col-12">
@@ -28,29 +28,37 @@ export default {
         return {
             store,
             cardList : [],
+            apiUrl : 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0',
         }
-    },
-
-    created() {
-    axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
-    .then( (response) => {
-        console.log(response.data.data);
-        this.cardList = response.data.data;
-        setTimeout( () => {
-            this.cardList = response.data.data;
-            this.store.isLoading = false;
-        },2000)
-    })
-    .catch(function (error) {
-        console.log(error);
-    })
     },
 
     components : {
         CardList,
         SelectCardType,
         LoaderApp,
-    }
+    },
+
+    created() {
+    this.search();
+    },
+
+    methods: {
+            search(archetype_name){
+                    axios.get(`${this.apiUrl}?archetype=${archetype_name}`)
+                .then( (response) => {
+                    this.cardList = response.data.data;
+                    setTimeout( () => {
+                        this.cardList = response.data.data;
+                        this.store.isLoading = false;
+                    },2000)
+                })
+                .catch(function (error) {
+                    console.log(error);
+                })
+                }
+
+
+    },
 }
 </script>
 
