@@ -1,13 +1,15 @@
 <template>
     <main>
         <SelectCardType />
-        <div class="row" v-if="store.isLoading">
-            <div class="col-12">
-                <LoaderApp/>
+        <div class="container">
+            <div class="row" v-if="store.isLoading">
+                <div class="col-12">
+                    <LoaderApp/>
+                </div>
             </div>
-        </div>
-        <div class="row" v-else >
-            <CardList :cardList="cardList" />
+            <div class="row" v-else >
+                <CardList :cardList="cardList" />
+            </div>
         </div>
     </main>
 </template>
