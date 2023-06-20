@@ -11,7 +11,10 @@
         </div>
     </div>
 </template>
+
+
 <script>
+
 export default {
     name : 'SingleCard',
     data() {
@@ -27,9 +30,9 @@ export default {
     },
 }
 </script>
+
 <style lang="scss" scoped>
     .card{
         background-color: rgb(64, 255, 0);
-
     }
 </style>
