@@ -1,13 +1,14 @@
 <template>
     <main>
         <CardList />
+        <SelectCardType />
     </main>
 </template>
 
 <script>
 
 import CardList from './CardList.vue';
-
+import SelectCardType from './SelectCardType.vue';
 
 export default {
     name : 'MainApp',
@@ -19,6 +20,7 @@ export default {
 
     components : {
         CardList,
+        SelectCardType,
     }
 }
 </script>
