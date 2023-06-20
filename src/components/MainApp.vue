@@ -1,7 +1,7 @@
 <template>
     <main>
-        <CardList />
         <SelectCardType />
+        <CardList />
     </main>
 </template>
 
